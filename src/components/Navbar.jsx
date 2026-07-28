@@ -65,6 +65,19 @@ return (
               <Phone size={13} /> +91 88857 16667
             </a>
 
+            {/* Theme toggle - mobile */}
+            <button
+              onClick={toggle}
+              className={`flex md:hidden items-center justify-center w-8 h-8 rounded-full border transition-all ${
+                isTransparent
+                  ? 'border-white/30 text-white bg-white/10 hover:bg-white/20'
+                  : dark
+                    ? 'border-[#00C8FF]/40 text-[#00C8FF] bg-[#00C8FF]/10 hover:bg-[#00C8FF]/20'
+                    : 'border-[#0057B8]/30 text-[#0057B8] bg-blue-50 hover:bg-blue-100'
+              }`}>
+              {dark ? <Sun size={14} /> : <Moon size={14} />}
+            </button>
+
             {/* Theme toggle - desktop */}
             <button
               onClick={toggle}
