@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Package, FlaskConical, CheckCircle } from 'lucide-react';
 import { products } from '../data/products';
 import TiltCard from '../components/TiltCard';
+import prodBg from '../assets/prod.png';
 
 const WA_NUMBER = '918885716667';
 
@@ -34,12 +35,12 @@ export default function ProductDetail() {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Left: Visual */}
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <div className="rounded-3xl overflow-hidden relative h-72">
+            <div className="rounded-3xl overflow-hidden relative h-64 sm:h-80 lg:h-96">
               <img
                 src={product.image}
                 alt={product.name}
                 className="absolute inset-0 w-full h-full object-cover"
-                onError={e => { e.target.style.display = 'none'; }}
+                onError={e => { e.target.src = prodBg; }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001a3d]/80 via-[#001a3d]/30 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">

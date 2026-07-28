@@ -1,3 +1,8 @@
+import cdiImg from '../assets/cdi.jpeg';
+import dmdoclImg from '../assets/dmdocl.jpeg';
+import cbbImg from '../assets/cbb.jpeg';
+import dmdoImg from '../assets/dmdo.png';
+
 export const products = [
   {
     id: 1,
@@ -12,7 +17,7 @@ export const products = [
     endUse: "Dabigatran API",
     applications: ["Dabigatran Etexilate (anticoagulant)", "Peptide coupling reagent", "Carbamate synthesis"],
     category: "Coupling Reagents",
-    image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=600&q=80&auto=format&fit=crop",
+    image: cdiImg,
     description: "CDI is a highly efficient coupling reagent widely used in pharmaceutical synthesis. It activates carboxylic acids to form reactive acylimidazole intermediates, making it essential in the synthesis of Dabigatran, a direct thrombin inhibitor.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0057B8"/><stop offset="100%" style="stop-color:#00C8FF"/></linearGradient></defs>
@@ -51,7 +56,7 @@ export const products = [
     endUse: "Olmesartan Medoxomil, Azilsartan",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Azilsartan Medoxomil synthesis", "Prodrug formation"],
     category: "Dioxolone Derivatives",
-    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&q=80&auto=format&fit=crop",
+    image: dmdoclImg,
     description: "DMDOCL is a critical pharmaceutical intermediate used in the synthesis of Olmesartan Medoxomil and Azilsartan Medoxomil, both angiotensin II receptor blockers (ARBs) used for treating hypertension.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0099FF"/><stop offset="100%" style="stop-color:#0057B8"/></linearGradient></defs>
@@ -82,7 +87,7 @@ export const products = [
     endUse: "Ketoconazole, Itraconazole",
     applications: ["Ketoconazole synthesis (antifungal)", "Itraconazole synthesis", "Azole antifungal intermediates"],
     category: "Benzoate Intermediates",
-    image: "https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=600&q=80&auto=format&fit=crop",
+    image: cbbImg,
     description: "CBB is an essential intermediate in the synthesis of azole antifungal agents including Ketoconazole and Itraconazole. These APIs are widely used in treating systemic and topical fungal infections.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7C3AED"/><stop offset="100%" style="stop-color:#0099FF"/></linearGradient></defs>
@@ -116,7 +121,7 @@ export const products = [
     endUse: "Olmesartan Medoxomil",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Cyclic carbonate synthesis", "Prodrug carrier"],
     category: "Dioxolone Derivatives",
-    image: "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?w=600&q=80&auto=format&fit=crop",
+    image: dmdoImg,
     description: "DMDO is a cyclic carbonate intermediate used in the synthesis of Olmesartan Medoxomil, a widely prescribed antihypertensive drug. It serves as the medoxomil prodrug moiety that enhances oral bioavailability.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00C8FF"/><stop offset="100%" style="stop-color:#0057B8"/></linearGradient></defs>

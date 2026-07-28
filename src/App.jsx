@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+import BottomNav from './components/BottomNav';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
@@ -33,6 +34,7 @@ function Layout() {
         </Routes>
       </main>
       <Footer />
+      <BottomNav />
       <FloatingButtons />
     </>
   );

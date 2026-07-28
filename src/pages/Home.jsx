@@ -90,7 +90,8 @@ export default function Home() {
         <SectionBg url="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80&auto=format&fit=crop" opacity={0.45} />
         <div className="absolute inset-0 bg-gradient-to-b from-[#001a3d]/70 via-[#001a3d]/40 to-[#020d1f]/80" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
             <motion.div {...fadeUp(0.1)} className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-xs text-[#00C8FF] mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00C8FF] animate-pulse" />
               GMP Certified Pharmaceutical Intermediates
@@ -111,14 +112,16 @@ export default function Home() {
               <Link to="/contact" className="hidden flex items-center gap-2 px-6 py-3 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all border border-white/20">
                 Request Quote
               </Link>
-              <a href="https://wa.me/918885716667?text=Hi%20Max%20Fine%20Chem%2C%20I%20would%20like%20to%20request%20your%20product%20catalogue.%20Please%20share%20the%20details." target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 glass text-[#00C8FF] font-semibold rounded-xl hover:bg-white/10 transition-all border border-[#00C8FF]/30">
-                Request Catalogue
-              </a>
+
             </motion.div>
             <motion.div {...fadeUp(0.6)} className="mt-10 flex flex-wrap gap-3">
               {['CDI', 'DMDOCL', 'CBB', 'DMDO'].map(p => (
                 <span key={p} className="px-3 py-1 glass text-xs text-[#00C8FF] rounded-full border border-[#00C8FF]/20">{p}</span>
               ))}
+            </motion.div>
+            </div>
+            <motion.div {...fadeUp(0.3)} className="hidden lg:flex items-center justify-center">
+              <img src="/src/assets/log.jpeg" alt="Max Fine Chem" className="w-72 h-72 object-contain rounded-3xl shadow-2xl shadow-blue-900/40 border border-white/10" />
             </motion.div>
           </div>
         </div>
@@ -186,7 +189,7 @@ export default function Home() {
             <h2 className="mt-2 text-3xl font-bold text-gray-900 dark:text-white">Flagship <span className="gradient-text">Pharmaceutical Intermediates</span></h2>
             <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">High-purity intermediates for cardiovascular, antifungal, and anticoagulant API synthesis</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {products.map((p, i) => <ProductCard key={p.id} product={p} index={i} />)}
           </div>
           <div className="text-center mt-10">
@@ -208,8 +211,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {industries.map((ind, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                <TiltCard className="text-center p-5 rounded-2xl bg-gradient-to-b from-blue-50 to-white dark:from-blue-900/20 dark:to-[#0a1628] border border-blue-100 dark:border-blue-900/30">
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="h-full">
+                <TiltCard className="h-full text-center p-5 rounded-2xl bg-gradient-to-b from-blue-50 to-white dark:from-blue-900/20 dark:to-[#0a1628] border border-blue-100 dark:border-blue-900/30">
                   <div className="text-3xl mb-2">{ind.icon}</div>
                   <div className="font-semibold text-sm text-gray-800 dark:text-white">{ind.name}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{ind.desc}</div>
@@ -285,7 +288,7 @@ export default function Home() {
             className="text-3xl font-bold text-white">Ready to Partner with <span className="gradient-text">Max Fine Chem?</span></motion.h2>
           <p className="mt-4 text-blue-200">Get competitive pricing, CoA, MSDS and technical support for all our pharmaceutical intermediates.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="px-8 py-3 bg-white text-[#0057B8] font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg">
+            <Link to="/contact#quote-form" className="px-8 py-3 bg-white text-[#0057B8] font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg">
               Request a Quote
             </Link>
             <a href="mailto:maxfinechem@gmail.com" className="px-8 py-3 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all border border-white/20">

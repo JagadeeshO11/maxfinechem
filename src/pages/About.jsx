@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Target, Eye, Award } from 'lucide-react';
 import MoleculeBg from '../components/MoleculeBg';
 import TiltCard from '../components/TiltCard';
+import aboutBg from '../assets/about.png';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 25 },
@@ -13,13 +14,17 @@ const fadeUp = (delay = 0) => ({
 export default function About() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#020d1f] pt-20">
-      <div className="hero-gradient py-16 relative overflow-hidden">
+      <div
+        className="relative flex items-center min-h-[80vh] overflow-hidden"
+        style={{ backgroundImage: `url(${aboutBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
         <MoleculeBg />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Who We Are</span>
-            <h1 className="mt-2 text-3xl sm:text-4xl font-bold text-white">About <span className="gradient-text">Max Fine Chem</span></h1>
-            <p className="mt-3 text-blue-200 max-w-xl text-sm">A decade of excellence in pharmaceutical intermediate manufacturing</p>
+            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">About <span className="gradient-text">Max Fine Chem</span></h1>
+            <p className="mt-3 text-blue-200 max-w-xl text-sm sm:text-base">A decade of excellence in pharmaceutical intermediate manufacturing</p>
           </motion.div>
         </div>
       </div>

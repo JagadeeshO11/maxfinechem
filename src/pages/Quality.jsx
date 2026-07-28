@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Shield, Award, Microscope } from 'lucide-react';
 import MoleculeBg from '../components/MoleculeBg';
 import TiltCard from '../components/TiltCard';
+import heroBg from '../assets/hero.png';
+import isoPdf from '../assets/ISO-MAX FINE CHEM.pdf';
+import gstPdf from '../assets/MAX NEW CERTIFICATE_GST.pdf';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 25 },
@@ -24,13 +27,17 @@ const qcTests = [
 export default function Quality() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#020d1f] pt-20">
-      <div className="hero-gradient py-16 relative overflow-hidden">
+      <div
+        className="relative flex items-center min-h-[80vh] overflow-hidden"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
         <MoleculeBg />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Standards & Compliance</span>
-            <h1 className="mt-2 text-3xl sm:text-4xl font-bold text-white">Quality <span className="gradient-text">Assurance</span></h1>
-            <p className="mt-3 text-blue-200 max-w-xl text-sm">Every batch tested, every shipment certified — our commitment to quality is absolute</p>
+            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Quality <span className="gradient-text">Assurance</span></h1>
+            <p className="mt-3 text-blue-200 max-w-xl text-sm sm:text-base">Every batch tested, every shipment certified — our commitment to quality is absolute</p>
           </motion.div>
         </div>
       </div>
@@ -58,6 +65,32 @@ export default function Quality() {
               </TiltCard>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Documents */}
+      <section className="pb-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={isoPdf} target="_blank" rel="noreferrer"
+            className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white dark:bg-[#0a1628] border border-gray-100 dark:border-blue-900/30 shadow-sm hover:border-[#0057B8] transition-colors group">
+            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0">
+              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-purple-600 dark:fill-purple-400"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            </div>
+            <div>
+              <div className="text-sm font-bold text-gray-900 dark:text-white">ISO 9001:2015</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">View Certificate</div>
+            </div>
+          </a>
+          <a href={gstPdf} target="_blank" rel="noreferrer"
+            className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white dark:bg-[#0a1628] border border-gray-100 dark:border-blue-900/30 shadow-sm hover:border-[#0057B8] transition-colors group">
+            <div className="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-green-600 dark:fill-green-400"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            </div>
+            <div>
+              <div className="text-sm font-bold text-gray-900 dark:text-white">GST Certificate</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">View Certificate</div>
+            </div>
+          </a>
         </div>
       </section>
 

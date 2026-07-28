@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, FlaskConical } from 'lucide-react';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
+import prodBg from '../assets/prod.png';
+import brochure from '../assets/MAX_FINE_CHEM_Product_Brochure.pdf';
 
 const categories = ['All', ...new Set(products.map(p => p.category))];
 
@@ -20,12 +22,21 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-[#F7FAFD] dark:bg-[#020d1f] pt-20">
       {/* Header */}
-      <div className="hero-gradient py-16 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div
+        className="relative flex items-center min-h-[80vh] overflow-hidden"
+        style={{ backgroundImage: `url(${prodBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Our Portfolio</span>
-            <h1 className="mt-2 text-3xl sm:text-4xl font-bold text-white">Pharmaceutical <span className="gradient-text">Intermediates</span></h1>
-            <p className="mt-3 text-blue-200 max-w-xl text-sm">High-purity intermediates for API synthesis — with full documentation, CoA, and MSDS</p>
+            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Pharmaceutical <span className="gradient-text">Intermediates</span></h1>
+            <p className="mt-3 text-blue-200 max-w-xl text-sm sm:text-base">High-purity intermediates for API synthesis — with full documentation, CoA, and MSDS</p>
+            <a href={brochure} target="_blank" rel="noreferrer"
+              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-[#0057B8] hover:bg-[#0099FF] text-white text-sm font-semibold rounded-xl transition-colors shadow-lg shadow-blue-900/30">
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Brochure
+            </a>
           </motion.div>
         </div>
       </div>
@@ -64,34 +75,7 @@ export default function Products() {
           </div>
         )}
 
-        {/* Table View */}
-        <div className="mt-16">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Product Specifications Overview</h2>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100 dark:border-blue-900/30">
-            <table className="w-full text-sm">
-              <thead className="bg-[#0057B8] text-white">
-                <tr>
-                  {['Product', 'Short Name', 'CAS No.', 'Formula', 'MW', 'Purity', 'End Use'].map(h => (
-                    <th key={h} className="px-4 py-3 text-left font-semibold text-xs">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {products.map((p, i) => (
-                  <tr key={p.id} className={`border-t border-gray-100 dark:border-blue-900/20 ${i % 2 === 0 ? 'bg-white dark:bg-[#0a1628]' : 'bg-blue-50/30 dark:bg-[#0d1e3a]'}`}>
-                    <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">{p.name}</td>
-                    <td className="px-4 py-3 text-[#0057B8] dark:text-[#00C8FF] font-semibold">{p.shortName}</td>
-                    <td className="px-4 py-3 font-mono text-gray-600 dark:text-gray-400">{p.cas}</td>
-                    <td className="px-4 py-3 font-mono text-gray-600 dark:text-gray-400">{p.formula}</td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-400">{p.molecularWeight}</td>
-                    <td className="px-4 py-3 text-green-600 dark:text-green-400 font-medium">{p.purity}</td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-400">{p.endUse}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+
       </div>
     </div>
   );
