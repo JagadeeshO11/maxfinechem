@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Package, FlaskConical, CheckCircle } from 'lucide-react';
 import { products } from '../data/products';
@@ -15,6 +16,7 @@ function openWhatsApp(product) {
 export default function ProductDetail() {
   const { id } = useParams();
   const product = products.find(p => p.id === Number(id));
+  const [activeImg, setActiveImg] = useState(0);
 
   if (!product) return (
     <div className="min-h-screen flex items-center justify-center dark:bg-[#020d1f]">
@@ -35,18 +37,28 @@ export default function ProductDetail() {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Left: Visual */}
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <div className="rounded-3xl overflow-hidden relative h-64 sm:h-80 lg:h-96">
+            {/* Main image */}
+            <div className="rounded-3xl overflow-hidden relative h-64 sm:h-80 lg:h-96 bg-white dark:bg-[#0a1628]">
               <img
-                src={product.image}
+                src={product.images?.[activeImg] ?? product.image}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain p-4"
                 onError={e => { e.target.src = prodBg; }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001a3d]/80 via-[#001a3d]/30 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 drop-shadow-2xl" dangerouslySetInnerHTML={{ __html: product.svg }} />
-              </div>
             </div>
+            {/* Thumbnails */}
+            {product.images?.length > 1 && (
+              <div className="mt-3 flex gap-2 flex-wrap">
+                {product.images.map((img, i) => (
+                  <button key={i} onClick={() => setActiveImg(i)}
+                    className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all bg-white dark:bg-[#0a1628] ${
+                      activeImg === i ? 'border-[#0057B8] dark:border-[#00C8FF] shadow-md' : 'border-gray-200 dark:border-blue-900/30 opacity-60 hover:opacity-100'
+                    }`}>
+                    <img src={img} alt={`${product.shortName} ${i + 1}`} className="w-full h-full object-contain p-1" />
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="mt-4 grid grid-cols-2 gap-3">
               <a href="https://wa.me/918885716667?text=Hi%20Max%20Fine%20Chem%2C%20I%20would%20like%20to%20request%20the%20CoA%20for%20${encodeURIComponent(product.shortName)}.%20CAS%3A%20${encodeURIComponent(product.cas)}" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-[#0057B8] text-[#0057B8] dark:text-[#00C8FF] dark:border-[#00C8FF] text-sm font-semibold hover:bg-[#0057B8] hover:text-white dark:hover:bg-[#00C8FF] dark:hover:text-[#020d1f] transition-all">
                 Request CoA
