@@ -43,7 +43,7 @@ export default function Contact() {
   const contactItems = [
     { icon: <Phone size={18} />, label: 'Phone', value: '+91 88857 16667', href: 'tel:+918885716667' },
     { icon: <Mail size={18} />, label: 'Email', value: 'maxfinechem@gmail.com', href: 'mailto:maxfinechem@gmail.com' },
-    { icon: <MapPin size={18} />, label: 'Location', value: 'Hyderabad, Telangana, India', href: null },
+    { icon: <MapPin size={18} />, label: 'Location', value: 'Plot No. 281, Subhash Nagar, IDA, Jeedimetla, Medchal-Malkajgiri, Hyderabad, Telangana 500055, India', href: null },
     { icon: <LinkedInIcon size={18} />, label: 'LinkedIn', value: 'Max Fine Chem', href: 'https://www.linkedin.com/in/max-fine-chem-0b6420415' },
   ];
 
@@ -64,10 +64,10 @@ export default function Contact() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-10 lg:items-stretch">
 
-          {/* Contact Info */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="space-y-3">
+          {/* Contact Info + Map */}
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="flex flex-col space-y-3 order-2 lg:order-1">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h2>
             {contactItems.map((item, i) => (
               <TiltCard key={i} intensity={8} className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#0a1628] border border-gray-100 dark:border-blue-900/30">
@@ -87,19 +87,18 @@ export default function Contact() {
                 </div>
               </TiltCard>
             ))}
-
-            {/* Map */}
-            <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 h-48 mt-4">
+            {/* Map — inside col 1 on desktop, fills remaining height */}
+            <div className="hidden lg:block rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 flex-1 min-h-[160px]">
               <iframe
                 title="Max Fine Chem Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5251550063344!2d78.4309335!3d17.5301665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fcd42b57059%3A0x66e63b5218d31bf8!2sMax%20Fine%20Chem!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15219.442877319128!2d78.44989215123256!3d17.514160934314187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splot%20no.%20281%20subhash%20nagar%20ida%20jeedimetla%20hyderabad%20telangana%20500055!5e0!3m2!1sen!2sin!4v1785306364998!5m2!1sen!2sin"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </motion.div>
 
           {/* Form */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="lg:col-span-2">
-            <div className="bg-white dark:bg-[#0a1628] rounded-2xl border border-gray-100 dark:border-blue-900/30 p-8 shadow-sm">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="lg:col-span-2 order-1 lg:order-2">
+            <div className="bg-white dark:bg-[#0a1628] rounded-2xl border border-gray-100 dark:border-blue-900/30 p-8 shadow-sm h-full">
               <div className="flex items-center gap-3 mb-6" id="quote-form">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">Send an Inquiry</h2>
                 <span className="flex items-center gap-1.5 text-xs text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full">
@@ -152,6 +151,14 @@ export default function Contact() {
             </div>
           </motion.div>
 
+        </div>
+
+        {/* Map — mobile only (after form) */}
+        <div className="lg:hidden mt-8 rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 h-64 sm:h-80">
+          <iframe
+            title="Max Fine Chem Location"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15219.442877319128!2d78.44989215123256!3d17.514160934314187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splot%20no.%20281%20subhash%20nagar%20ida%20jeedimetla%20hyderabad%20telangana%20500055!5e0!3m2!1sen!2sin!4v1785306364998!5m2!1sen!2sin"
+            width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div>
     </div>
