@@ -91,7 +91,7 @@ export const products = [
     molecularWeight: "257.08 g/mol",
     purity: "≥ 98.0%",
     appearance: "White crystalline solid",
-    packaging: ["25 kg fiber drums", "50 kg HDPE drums"],
+    packaging: ["50 kg HDPE drums"],
     endUse: "Ketoconazole, Itraconazole",
     applications: ["Ketoconazole synthesis (antifungal)", "Itraconazole synthesis", "Azole antifungal intermediates"],
     category: "Benzoate Intermediates",
@@ -170,7 +170,7 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { value: "10+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "4+", label: "Core Products" },
   { value: "50+", label: "Global Clients" },
   { value: "99%", label: "Purity Standards" },

@@ -47,7 +47,7 @@ return (
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Max Fine Chem" className="h-12 w-12 object-contain rounded-xl border-2 border-[#0057B8] shadow-md shadow-blue-500/20" />
             <div className="flex flex-col leading-tight">
-              <span className={`text-base font-extrabold tracking-wide ${isTransparent ? 'text-white' : 'text-[#0057B8] dark:text-[#00C8FF]'}`}>MAX FINE CHEM</span>
+              <span className={`text-base font-extrabold tracking-wide ${isTransparent ? 'text-white' : 'text-[#0057B8] dark:text-[#00C8FF]'}`}>MAX FINE CHEMICALS</span>
               <span className={`text-[10px] font-medium tracking-widest uppercase ${isTransparent ? 'text-blue-200' : 'text-gray-500 dark:text-gray-400'}`}>Pharma Intermediates</span>
             </div>
           </Link>

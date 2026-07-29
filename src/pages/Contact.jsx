@@ -43,7 +43,7 @@ export default function Contact() {
   const contactItems = [
     { icon: <Phone size={18} />, label: 'Phone', value: '+91 88857 16667', href: 'tel:+918885716667' },
     { icon: <Mail size={18} />, label: 'Email', value: 'maxfinechem@gmail.com', href: 'mailto:maxfinechem@gmail.com' },
-    { icon: <MapPin size={18} />, label: 'Location', value: 'Plot No. 281, Subhash Nagar, IDA, Jeedimetla, Medchal-Malkajgiri, Hyderabad, Telangana 500055, India', href: null },
+    { icon: <MapPin size={18} />, label: 'Location', value: 'Plot No. 281, Subhash Nagar, IDA, Jeedimetla, Opposite to Bodhi Vriksha Olympiad School, Medchal-Malkajgiri, Hyderabad, Telangana 500055, India', href: null },
     { icon: <LinkedInIcon size={18} />, label: 'LinkedIn', value: 'Max Fine Chem', href: 'https://www.linkedin.com/in/max-fine-chem-0b6420415' },
   ];
 
@@ -91,7 +91,7 @@ export default function Contact() {
             <div className="hidden lg:block rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 flex-1 min-h-[160px]">
               <iframe
                 title="Max Fine Chem Location"
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3804.7001807551574!2d78.46113927516804!3d17.52181998338845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDMxJzE4LjYiTiA3OMKwMjcnNDkuNCJF!5e0!3m2!1sen!2sin!4v1785320179742!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3804.6994537565615!2d78.46366845!3d17.52185466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f00548c5637%3A0x6a5a80696d156318!2sBodhi%20vriksha%20olympiad%20School!5e0!3m2!1sen!2sin!4v1785326351628!5m2!1sen!2sin"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </motion.div>
@@ -157,7 +157,7 @@ export default function Contact() {
         <div className="lg:hidden mt-8 rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 h-64 sm:h-80">
           <iframe
             title="Max Fine Chem Location"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3804.7001807551574!2d78.46113927516804!3d17.52181998338845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDMxJzE4LjYiTiA3OMKwMjcnNDkuNCJF!5e0!3m2!1sen!2sin!4v1785320179742!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3804.6994537565615!2d78.46366845!3d17.52185466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f00548c5637%3A0x6a5a80696d156318!2sBodhi%20vriksha%20olympiad%20School!5e0!3m2!1sen!2sin!4v1785326351628!5m2!1sen!2sin"
             width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div>

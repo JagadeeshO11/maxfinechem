@@ -97,13 +97,13 @@ export default function Home() {
               GMP Certified Pharmaceutical Intermediates
             </motion.div>
             <motion.h1 {...fadeUp(0.2)} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              MAX FINE <span className="gradient-text">CHEM</span>
+              MAX FINE <span className="gradient-text">CHEMICALS</span>
             </motion.h1>
             <motion.p {...fadeUp(0.3)} className="mt-3 text-lg text-blue-200 font-light tracking-wide">
               Quality • Innovation • Reliability
             </motion.p>
             <motion.p {...fadeUp(0.4)} className="mt-5 text-base sm:text-lg text-gray-300 leading-relaxed max-w-xl">
-              Leading manufacturer of high-purity pharmaceutical intermediates — CDI, DMDOCL, CBB & DMDO — trusted by API manufacturers worldwide.
+              Leading manufacturer of high-purity pharmaceutical intermediates & fine chemicals — CDI, DMDOCL, CBB & DMDO — trusted by API manufacturers worldwide.
             </motion.p>
             <motion.div {...fadeUp(0.5)} className="mt-8 flex flex-wrap gap-3">
               <Link to="/products" className="flex items-center gap-2 px-6 py-3 bg-[#0057B8] hover:bg-[#0099FF] text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-900/40">
@@ -268,7 +268,7 @@ export default function Home() {
                     {step.icon}
                   </div>
                   <div className="mt-3 font-semibold text-sm text-gray-900 dark:text-white">{step.title}</div>
-                  <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{step.desc}</div>
+                  <div className="mt-1 text-xs font-semibold text-[#0057B8] dark:text-[#00C8FF]">{step.desc}</div>
                   </TiltCard>
                 </motion.div>
               ))}

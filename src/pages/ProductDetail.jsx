@@ -60,12 +60,12 @@ export default function ProductDetail() {
               </div>
             )}
             <div className="mt-4 grid grid-cols-2 gap-3">
-              <a href="https://wa.me/918885716667?text=Hi%20Max%20Fine%20Chem%2C%20I%20would%20like%20to%20request%20the%20CoA%20for%20${encodeURIComponent(product.shortName)}.%20CAS%3A%20${encodeURIComponent(product.cas)}" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-[#0057B8] text-[#0057B8] dark:text-[#00C8FF] dark:border-[#00C8FF] text-sm font-semibold hover:bg-[#0057B8] hover:text-white dark:hover:bg-[#00C8FF] dark:hover:text-[#020d1f] transition-all">
+              <button onClick={() => window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Max Fine Chem, I would like to request the CoA for ${product.shortName}.`)}`, '_blank')} className="flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-[#0057B8] text-[#0057B8] dark:text-[#00C8FF] dark:border-[#00C8FF] text-sm font-semibold hover:bg-[#0057B8] hover:text-white dark:hover:bg-[#00C8FF] dark:hover:text-[#020d1f] transition-all">
                 Request CoA
-              </a>
-              <a href="https://wa.me/918885716667?text=Hi%20Max%20Fine%20Chem%2C%20I%20would%20like%20to%20request%20the%20MSDS%20for%20${encodeURIComponent(product.shortName)}.%20CAS%3A%20${encodeURIComponent(product.cas)}" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 text-sm font-semibold hover:border-[#0057B8] hover:text-[#0057B8] transition-all">
+              </button>
+              <button onClick={() => window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Max Fine Chem, I would like to request the MSDS for ${product.shortName}.`)}`, '_blank')} className="flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 text-sm font-semibold hover:border-[#0057B8] hover:text-[#0057B8] transition-all">
                 Request MSDS
-              </a>
+              </button>
             </div>
           </motion.div>
 
