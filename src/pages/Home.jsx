@@ -98,7 +98,7 @@ export default function Home() {
               GMP Certified Pharmaceutical Intermediates
             </motion.div>
             <motion.h1 {...fadeUp(0.2)} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              MAX FINE <span className="gradient-text">CHEMICALS</span>
+              MAX FINE <span className="gradient-text">CHEM</span>
             </motion.h1>
             <motion.p {...fadeUp(0.3)} className="mt-3 text-lg text-blue-200 font-light tracking-wide">
               Quality • Innovation • Reliability

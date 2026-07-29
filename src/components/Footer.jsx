@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 text-[#00C8FF] shrink-0" />
-                <span>Hyderabad, Telangana, India</span>
+                <a href="https://maps.google.com/?q=Bodhi+Vriksha+Olympiad+School,+Subhash+Nagar,+IDA,+Jeedimetla,+Hyderabad,+Telangana+500055" target="_blank" rel="noreferrer" className="hover:text-[#00C8FF] transition-colors">Hyderabad, Telangana, India</a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={14} className="text-[#00C8FF] shrink-0" />

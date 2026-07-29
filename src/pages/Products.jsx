@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, FlaskConical } from 'lucide-react';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import prodBg from '../assets/prod.png';
-import brochure from '../assets/MAX_FINE_CHEM_Product_Brochure.pdf';
 
 const categories = ['All', ...new Set(products.map(p => p.category))];
 
@@ -28,9 +28,9 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Our Portfolio</span>
-            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Pharmaceutical <span className="gradient-text">Intermediates</span></h1>
+            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Pharmaceutical <span className="gradient-text">Intermediates & Fine Chemicals</span></h1>
             <p className="mt-3 text-blue-200 max-w-xl text-sm sm:text-base">High-purity intermediates for API synthesis — with full documentation, CoA, and MSDS</p>
-            <a href={brochure} target="_blank" rel="noreferrer"
+            <a href="/brochure" target="_blank" rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-[#0057B8] hover:bg-[#0099FF] text-white text-sm font-semibold rounded-xl transition-colors shadow-lg shadow-blue-900/30">
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Brochure

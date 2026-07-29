@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import BottomNav from './components/BottomNav';
+import Brochure from './pages/Brochure';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
@@ -44,7 +45,10 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <Layout />
+        <Routes>
+          <Route path="/brochure" element={<Brochure />} />
+          <Route path="/*" element={<Layout />} />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );

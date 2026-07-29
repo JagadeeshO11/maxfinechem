@@ -1,10 +1,8 @@
 import cdiImg from '../assets/cdi.jpeg';
 import cdiImg2 from '../assets/cdi.png';
 import cdiImg3 from '../assets/cdi3.png';
-import dmdoclImg from '../assets/dmdocl.jpeg';
+import dmdoclImg from '../assets/dmdocl.png';
 import dmdoclImg2 from '../assets/dmdocl1.jpeg';
-import dmdoclImg3 from '../assets/dmdocl.png';
-import dmdoclImg4 from '../assets/dmdocl2.png';
 import cbbImg from '../assets/cbb.jpeg';
 import cbbImg1 from '../assets/cbb1.jpeg';
 import dmdoImg from '../assets/dmdo3.png';
@@ -63,8 +61,8 @@ export const products = [
     endUse: "Olmesartan Medoxomil, Azilsartan",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Azilsartan Medoxomil synthesis", "Prodrug formation"],
     category: "Dioxolone Derivatives",
-    image: dmdoclImg4,
-    images: [dmdoclImg4, dmdoclImg, dmdoclImg2, dmdoclImg3],
+    image: dmdoclImg,
+    images: [dmdoclImg, dmdoclImg2],
     description: "DMDOCL is a critical pharmaceutical intermediate used in the synthesis of Olmesartan Medoxomil and Azilsartan Medoxomil, both angiotensin II receptor blockers (ARBs) used for treating hypertension.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0099FF"/><stop offset="100%" style="stop-color:#0057B8"/></linearGradient></defs>
