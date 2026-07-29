@@ -91,7 +91,7 @@ export default function Contact() {
             <div className="hidden lg:block rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 flex-1 min-h-[160px]">
               <iframe
                 title="Max Fine Chem Location"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15219.442877319128!2d78.44989215123256!3d17.514160934314187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splot%20no.%20281%20subhash%20nagar%20ida%20jeedimetla%20hyderabad%20telangana%20500055!5e0!3m2!1sen!2sin!4v1785306364998!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3804.7001807551574!2d78.46113927516804!3d17.52181998338845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDMxJzE4LjYiTiA3OMKwMjcnNDkuNCJF!5e0!3m2!1sen!2sin!4v1785320179742!5m2!1sen!2sin"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </motion.div>
@@ -157,7 +157,7 @@ export default function Contact() {
         <div className="lg:hidden mt-8 rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 h-64 sm:h-80">
           <iframe
             title="Max Fine Chem Location"
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15219.442877319128!2d78.44989215123256!3d17.514160934314187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splot%20no.%20281%20subhash%20nagar%20ida%20jeedimetla%20hyderabad%20telangana%20500055!5e0!3m2!1sen!2sin!4v1785306364998!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3804.7001807551574!2d78.46113927516804!3d17.52181998338845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDMxJzE4LjYiTiA3OMKwMjcnNDkuNCJF!5e0!3m2!1sen!2sin!4v1785320179742!5m2!1sen!2sin"
             width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div>

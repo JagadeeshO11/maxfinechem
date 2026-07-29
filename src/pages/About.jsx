@@ -21,7 +21,7 @@ export default function About() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Who We Are</span>
-            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">About <span className="gradient-text">Max Fine Chem</span></h1>
+            <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">About <span className="gradient-text">Max Fine Chemicals</span></h1>
             <p className="mt-3 text-blue-200 max-w-xl text-sm sm:text-base">A decade of excellence in pharmaceutical intermediate manufacturing</p>
           </motion.div>
         </div>
