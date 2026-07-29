@@ -1,13 +1,13 @@
 import cdiImg from '../assets/cdi.jpeg';
 import cdiImg2 from '../assets/cdi.png';
-import cdiImg3 from '../assets/cdi1.png';
-import cdiImg4 from '../assets/cdi2.png';
+import cdiImg3 from '../assets/cdi3.png';
 import dmdoclImg from '../assets/dmdocl.jpeg';
 import dmdoclImg2 from '../assets/dmdocl1.jpeg';
 import cbbImg from '../assets/cbb.jpeg';
-import dmdoImg from '../assets/dmdo1.png';
-import dmdoImg2 from '../assets/dmdo2.png';
+import dmdoImg from '../assets/dmdo2.png';
+import dmdoImg2 from '../assets/dmdo3.png';
 import dmdoImg3 from '../assets/dmdo4.png';
+import dmdoImg4 from '../assets/dmdo5.png';
 
 export const products = [
   {
@@ -24,7 +24,7 @@ export const products = [
     applications: ["Dabigatran Etexilate (anticoagulant)", "Peptide coupling reagent", "Carbamate synthesis"],
     category: "Coupling Reagents",
     image: cdiImg2,
-    images: [cdiImg2, cdiImg, cdiImg3, cdiImg4],
+    images: [cdiImg2, cdiImg, cdiImg3],
     description: "CDI is a highly efficient coupling reagent widely used in pharmaceutical synthesis. It activates carboxylic acids to form reactive acylimidazole intermediates, making it essential in the synthesis of Dabigatran, a direct thrombin inhibitor.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0057B8"/><stop offset="100%" style="stop-color:#00C8FF"/></linearGradient></defs>
@@ -130,8 +130,8 @@ export const products = [
     endUse: "Olmesartan Medoxomil",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Cyclic carbonate synthesis", "Prodrug carrier"],
     category: "Dioxolone Derivatives",
-    image: dmdoImg,
-    images: [dmdoImg, dmdoImg2, dmdoImg3],
+    image: dmdoImg2,
+    images: [dmdoImg, dmdoImg2, dmdoImg3, dmdoImg4],
     description: "DMDO is a cyclic carbonate intermediate used in the synthesis of Olmesartan Medoxomil, a widely prescribed antihypertensive drug. It serves as the medoxomil prodrug moiety that enhances oral bioavailability.",
     svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00C8FF"/><stop offset="100%" style="stop-color:#0057B8"/></linearGradient></defs>
