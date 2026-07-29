@@ -14,11 +14,9 @@ const fadeUp = (delay = 0) => ({
 export default function About() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#020d1f] pt-20">
-      <div
-        className="relative flex items-center min-h-[80vh] overflow-hidden"
-        style={{ backgroundImage: `url(${aboutBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
+      <div className="relative flex items-center min-h-[80vh] overflow-hidden bg-[#001a3d]">
+        <img src={aboutBg} alt="" className="absolute inset-0 w-full h-full object-cover object-right sm:object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/90 via-[#001a3d]/60 to-[#001a3d]/80" />
         <MoleculeBg />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

@@ -13,7 +13,7 @@ export const products = [
     molecularWeight: "162.15 g/mol",
     purity: "≥ 98.0%",
     appearance: "White to off-white crystalline powder",
-    packaging: ["25 kg HDPE drums", "50 kg fiber drums", "Custom packaging available"],
+    packaging: ["25 kg HDPE drums", "Custom packaging available"],
     endUse: "Dabigatran API",
     applications: ["Dabigatran Etexilate (anticoagulant)", "Peptide coupling reagent", "Carbamate synthesis"],
     category: "Coupling Reagents",
@@ -52,7 +52,7 @@ export const products = [
     molecularWeight: "148.55 g/mol",
     purity: "≥ 97.0%",
     appearance: "Colorless to pale yellow liquid",
-    packaging: ["20 kg carboys", "200 kg drums", "IBC containers"],
+    packaging: ["25 kg drums"],
     endUse: "Olmesartan Medoxomil, Azilsartan",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Azilsartan Medoxomil synthesis", "Prodrug formation"],
     category: "Dioxolone Derivatives",
@@ -117,7 +117,7 @@ export const products = [
     molecularWeight: "114.10 g/mol",
     purity: "≥ 97.0%",
     appearance: "Colorless liquid",
-    packaging: ["20 kg carboys", "200 kg drums"],
+    packaging: ["25 kg drums", "50 kg drums"],
     endUse: "Olmesartan Medoxomil",
     applications: ["Olmesartan Medoxomil (antihypertensive)", "Cyclic carbonate synthesis", "Prodrug carrier"],
     category: "Dioxolone Derivatives",
@@ -144,12 +144,10 @@ export const products = [
 ];
 
 export const industries = [
-  { icon: "💊", name: "Cardiovascular", desc: "Antihypertensives, anticoagulants" },
-  { icon: "🦠", name: "Antifungal", desc: "Azole antifungal APIs" },
-  { icon: "🧬", name: "API Manufacturing", desc: "Active pharmaceutical ingredients" },
-  { icon: "🔬", name: "Research & Development", desc: "Custom synthesis support" },
-  { icon: "🏭", name: "Generic Pharma", desc: "Cost-effective intermediates" },
-  { icon: "🌍", name: "Export Markets", desc: "Global supply chain" },
+  { icon: "⚗️", name: "CDI", desc: "N,N'-Carbonyldiimidazole" },
+  { icon: "🧪", name: "DMDOCL", desc: "4-Chloromethyl-5-methyl-1,3-dioxol-2-one" },
+  { icon: "🔬", name: "CBB", desc: "cis Bromo Benzoate" },
+  { icon: "💊", name: "DMDO", desc: "4,5-Dimethyl-1,3-dioxol-2-one" },
 ];
 
 export const whyChooseUs = [

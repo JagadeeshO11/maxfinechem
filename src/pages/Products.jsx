@@ -22,11 +22,9 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-[#F7FAFD] dark:bg-[#020d1f] pt-20">
       {/* Header */}
-      <div
-        className="relative flex items-center min-h-[80vh] overflow-hidden"
-        style={{ backgroundImage: `url(${prodBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
+      <div className="relative flex items-center min-h-[80vh] overflow-hidden bg-[#001a3d]">
+        <img src={prodBg} alt="" className="absolute inset-0 w-full h-full object-cover object-right sm:object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/90 via-[#001a3d]/60 to-[#001a3d]/80" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <span className="text-xs font-semibold text-[#00C8FF] uppercase tracking-widest">Our Portfolio</span>

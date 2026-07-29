@@ -206,10 +206,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/25 dark:bg-[#020d1f]/40 pointer-events-none" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold text-[#0099FF] uppercase tracking-widest">Industries Served</span>
-            <h2 className="mt-2 text-3xl font-bold text-gray-900 dark:text-white">Powering <span className="gradient-text">Global Healthcare</span></h2>
+            <span className="text-xs font-semibold text-[#0099FF] uppercase tracking-widest">What We Manufacture</span>
+            <h2 className="mt-2 text-3xl font-bold text-gray-900 dark:text-white">Max Fine Chem <span className="gradient-text">Core Products</span></h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {industries.map((ind, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="h-full">
                 <TiltCard className="h-full text-center p-5 rounded-2xl bg-gradient-to-b from-blue-50 to-white dark:from-blue-900/20 dark:to-[#0a1628] border border-blue-100 dark:border-blue-900/30">

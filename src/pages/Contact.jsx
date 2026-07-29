@@ -50,11 +50,9 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F7FAFD] dark:bg-[#020d1f] pt-20">
       {/* Header */}
-      <div
-        className="relative flex items-center min-h-[80vh] overflow-hidden"
-        style={{ backgroundImage: `url(${aboutBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/85 via-[#0057B8]/60 to-[#001a3d]/70" />
+      <div className="relative flex items-center min-h-[80vh] overflow-hidden bg-[#001a3d]">
+        <img src={aboutBg} alt="" className="absolute inset-0 w-full h-full object-cover object-right sm:object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a3d]/90 via-[#001a3d]/60 to-[#001a3d]/80" />
         <MoleculeBg />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -94,7 +92,7 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-blue-900/30 h-48 mt-4">
               <iframe
                 title="Max Fine Chem Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5251550063344!2d78.4309335!3d17.5301665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fcd42b57059%3A0x66e63b5218d31bf8!2sMANIKANTA%20FINE%20CHEM!5e0!3m2!1sen!2sin!4v1785255929272!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5251550063344!2d78.4309335!3d17.5301665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fcd42b57059%3A0x66e63b5218d31bf8!2sMax%20Fine%20Chem!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </motion.div>
