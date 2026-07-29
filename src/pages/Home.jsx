@@ -6,6 +6,7 @@ import { products, industries, whyChooseUs, stats } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import MoleculeBg from '../components/MoleculeBg';
 import TiltCard from '../components/TiltCard';
+import logo from '../assets/log.jpeg';
 
 function Counter({ target, suffix, inView }) {
   const ref = useRef(null);
@@ -121,7 +122,7 @@ export default function Home() {
             </motion.div>
             </div>
             <motion.div {...fadeUp(0.3)} className="hidden lg:flex items-center justify-center">
-              <img src="/src/assets/log.jpeg" alt="Max Fine Chem" className="w-72 h-72 object-contain rounded-3xl shadow-2xl shadow-blue-900/40 border border-white/10" />
+              <img src={logo} alt="Max Fine Chem" className="w-72 h-72 object-contain rounded-3xl shadow-2xl shadow-blue-900/40 border border-white/10" />
             </motion.div>
           </div>
         </div>
